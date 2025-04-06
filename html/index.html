@@ -1,69 +1,79 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Astronaut Themed Website</title>
-    <link rel="stylesheet" href="/assets/css/style.css">
+    <title>Portofolio Data Analyst</title>
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-    <header id="header">
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#events">Events</a></li>
-            </ul>
-            <div class="social-links">
-                <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
-                <a href="https://github.com" target="_blank">GitHub</a>
-                <a href="https://www.instagram.com" target="_blank">Instagram</a>
-            </div>
-        </nav>
+    <header>
+        <div class="container">
+            <h1>Portofolio Data Analyst</h1>
+            <nav>
+                <ul>
+                    <li><a href="#about">Tentang Saya</a></li>
+                    <li><a href="#skills">Keterampilan</a></li>
+                    <li><a href="#experience">Pengalaman</a></li>
+                    <li><a href="#contact">Kontak</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <section id="home" class="section">
-        <div class="content">
-            <h1>Welcome to My Astronaut-Themed Website</h1>
-            <p>Explore my journey through space and technology!</p>
+    <section id="about" class="section">
+        <div class="container">
+            <h2>Tentang Saya</h2>
+            <p>Saya adalah seorang Data Analyst dengan pengalaman lebih dari 3 tahun dalam menganalisis data menggunakan berbagai alat dan teknik analisis. Keahlian saya meliputi pengolahan data, visualisasi, serta penggunaan alat seperti Excel, Python, dan SQL.</p>
         </div>
     </section>
 
-    <section id="about" class="section">
-        <h2>About Me</h2>
-        <p>Hi, I am an astronaut of the tech world. I travel through code, design, and creativity!</p>
-    </section>
-
     <section id="skills" class="section">
-        <h2>Skills</h2>
-        <ul>
-            <li>Web Development</li>
-            <li>Data Science</li>
-            <li>UI/UX Design</li>
-        </ul>
-    </section>
-
-    <section id="projects" class="section">
-        <h2>Projects</h2>
-        <p>Check out my amazing projects.</p>
+        <div class="container">
+            <h2>Keterampilan</h2>
+            <ul>
+                <li>Data Analysis dengan Python (Pandas, NumPy)</li>
+                <li>SQL dan Database Management</li>
+                <li>Visualisasi Data menggunakan Power BI, Tableau, dan Matplotlib</li>
+                <li>Excel Lanjutan</li>
+                <li>Machine Learning Dasar</li>
+            </ul>
+        </div>
     </section>
 
     <section id="experience" class="section">
-        <h2>Experience</h2>
-        <p>Experience in coding and tech space exploration!</p>
+        <div class="container">
+            <h2>Pengalaman</h2>
+            <div class="experience-item">
+                <h3>Data Analyst | PT. ABC</h3>
+                <p>2020 - Sekarang</p>
+                <p>Saya bertanggung jawab untuk menganalisis data penjualan, merancang laporan, dan memberikan wawasan untuk mendukung pengambilan keputusan bisnis.</p>
+            </div>
+            <div class="experience-item">
+                <h3>Junior Data Analyst | PT. XYZ</h3>
+                <p>2018 - 2020</p>
+                <p>Menganalisis data transaksi dan mengembangkan dashboard visualisasi untuk melacak performa bisnis menggunakan Tableau dan Power BI.</p>
+            </div>
+        </div>
     </section>
 
-    <section id="events" class="section">
-        <h2>Events</h2>
-        <p>Stay updated with my upcoming tech events.</p>
+    <section id="contact" class="section">
+        <div class="container">
+            <h2>Kontak</h2>
+            <p>Jika Anda tertarik untuk bekerja sama atau memiliki pertanyaan, jangan ragu untuk menghubungi saya!</p>
+            <form id="contactForm">
+                <input type="text" id="name" placeholder="Nama" required>
+                <input type="email" id="email" placeholder="Email" required>
+                <textarea id="message" placeholder="Pesan" required></textarea>
+                <button type="submit">Kirim Pesan</button>
+            </form>
+        </div>
     </section>
 
     <footer>
-        <p>&copy; 2025 Space Explorer. All Rights Reserved.</p>
+        <div class="container">
+            <p>&copy; 2025 Portofolio Data Analyst | Semua hak cipta dilindungi</p>
+        </div>
     </footer>
 
     <script src="../assets/js/script.js"></script>

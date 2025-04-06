@@ -1,30 +1,14 @@
-document.addEventListener("DOMContentLoaded", () => {
-    // Smooth Scroll Effect
-    const links = document.querySelectorAll('nav ul li a');
-    links.forEach(link => {
-        link.addEventListener('click', function (e) {
-            e.preventDefault();
-            const targetId = link.getAttribute('href').substring(1);
-            const targetSection = document.getElementById(targetId);
+document.getElementById("contactForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Mencegah form untuk melakukan refresh halaman
 
-            window.scrollTo({
-                top: targetSection.offsetTop - 50,
-                behavior: 'smooth'
-            });
-        });
-    });
-});
+    // Ambil data dari form
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const message = document.getElementById("message").value;
 
-// Hover Animation for Section Transitions
-const sections = document.querySelectorAll('.section');
-sections.forEach(section => {
-    section.addEventListener('mouseenter', () => {
-        section.style.transition = 'transform 0.3s';
-        section.style.transform = 'scale(1.05)';
-    });
+    // Menampilkan alert sebagai contoh
+    alert(`Pesan Anda telah terkirim!\n\nNama: ${name}\nEmail: ${email}\nPesan: ${message}`);
 
-    section.addEventListener('mouseleave', () => {
-        section.style.transition = 'transform 0.3s';
-        section.style.transform = 'scale(1)';
-    });
+    // Reset form setelah pengiriman
+    document.getElementById("contactForm").reset();
 });

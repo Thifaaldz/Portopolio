@@ -4,8 +4,15 @@ services:
     image: nginx:latest
     container_name: nginx-container
     ports:
-      - "80:80"
+      - "80:80"  # Mengekspos port 80 dari container ke host
     volumes:
-      - ./html:/usr/share/nginx/html  # Menyambungkan folder html ke container
-      - ./assets:/usr/share/nginx/assets  # Menyambungkan folder assets ke container
-      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro  # Menyambungkan nginx.conf ke dalam container sebagai file read-only
+      - ./html:/usr/share/nginx/html  # Menyambungkan folder html di host ke /usr/share/nginx/html di container
+      - ./assets:/usr/share/nginx/assets  # Menyambungkan folder assets di host ke /usr/share/nginx/assets di container
+      - ./css:/usr/share/nginx/css  # Menyambungkan folder css di host ke /usr/share/nginx/css di container
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro  # Menggunakan nginx.conf khusus sebagai file read-only di container
+    networks:
+      - portfolio_network  # Menambahkan ke dalam jaringan internal
+
+networks:
+  portfolio_network:
+    driver: bridge  # Menggunakan driver bridge untuk jaringan internal
